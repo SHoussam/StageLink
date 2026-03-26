@@ -33,7 +33,7 @@ The project also includes a **small AI module** that improves the experience by 
 
 Finding internships is often difficult for students because opportunities are scattered across many platforms, and companies also spend time sorting through many applications to find suitable candidates.
 
-CareerConnect AI solves this problem by offering a centralized platform where:
+StageLink solves this problem by offering a centralized platform where:
 
 - Students can create profiles, upload CVs, and apply for internships
 - Companies can post internship offers and manage applications
