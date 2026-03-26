@@ -1,8 +1,8 @@
 # StageLink
-# CareerConnect AI
+
 ### Smart Internship & Recruitment Platform for Students, Companies, and Admins
 
-CareerConnect AI is a web-based platform designed to simplify the internship search and recruitment process.  
+StageLink is a web-based platform designed to simplify the internship search and recruitment process.  
 It helps **students** find opportunities that match their skills, allows **companies** to publish internship offers and manage applicants, and gives **admins** a way to supervise the whole platform.
 
 The project also includes a **small AI module** that improves the experience by recommending internships, calculating match scores, and analyzing student skills from profiles or CVs.
