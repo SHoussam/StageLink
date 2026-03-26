@@ -1,11 +1,10 @@
 # StageLink
+### Smart Internship, Employability & Recruitment Platform
 
-### Smart Internship & Recruitment Platform for Students, Companies, and Admins
+StageLink is a web-based platform designed to connect **students**, **companies**, and **academic institutions** in one intelligent ecosystem.  
+It helps students find internships, helps companies identify suitable candidates, and helps schools monitor internship placement and market trends.
 
-StageLink is a web-based platform designed to simplify the internship search and recruitment process.  
-It helps **students** find opportunities that match their skills, allows **companies** to publish internship offers and manage applicants, and gives **admins** a way to supervise the whole platform.
-
-The project also includes a **small AI module** that improves the experience by recommending internships, calculating match scores, and analyzing student skills from profiles or CVs.
+Unlike a simple internship board, StageLink is designed as an **employability platform**: it not only allows students to apply for offers, but also helps them understand their strengths, detect missing skills, and improve their readiness for the job market.
 
 ---
 
@@ -13,10 +12,11 @@ The project also includes a **small AI module** that improves the experience by 
 
 - [Project Overview](#project-overview)
 - [Problem Statement](#problem-statement)
-- [Objectives](#objectives)
+- [Main Objectives](#main-objectives)
+- [What Makes StageLink Different](#what-makes-stagelink-different)
 - [Main Users](#main-users)
-- [Main Features](#main-features)
-- [AI Features](#ai-features)
+- [Core Features](#core-features)
+- [AI & Smart Features](#ai--smart-features)
 - [Tech Stack](#tech-stack)
 - [System Architecture](#system-architecture)
 - [Database Design](#database-design)
@@ -31,48 +31,92 @@ The project also includes a **small AI module** that improves the experience by 
 
 ## Project Overview
 
-Finding internships is often difficult for students because opportunities are scattered across many platforms, and companies also spend time sorting through many applications to find suitable candidates.
+Finding internships is often difficult for students because opportunities are scattered across different websites, and many students do not know whether their profile really matches the market.  
+At the same time, companies often receive many applications and need a better way to identify the most relevant candidates.
 
-StageLink solves this problem by offering a centralized platform where:
+StageLink solves this problem by providing a centralized platform where:
 
-- Students can create profiles, upload CVs, and apply for internships
-- Companies can post internship offers and manage applications
-- Admins can supervise users, offers, and platform activity
-- An AI-based recommendation system can suggest the best internships for each student
+- **Students** can create profiles, add skills, upload CVs, receive recommendations, and apply for internships
+- **Companies** can publish offers, manage candidates, and review ranked applicants
+- **Schools/Admins** can monitor internship placement, student progress, and market demand
 
-This project was developed as an **end-of-year web project** by a group of 4 students.
+The platform also includes a **small intelligent recommendation module** that calculates match scores, explains why an offer matches a student, and highlights missing skills.
 
 ---
 
 ## Problem Statement
 
-Students often face several challenges when looking for internships:
+Students face several challenges when searching for internships:
 
-- Difficulty finding relevant internship offers
-- Lack of personalized recommendations
-- Limited visibility of their profiles and skills
-- No simple way to track applications
+- Difficulty finding opportunities adapted to their profile
+- Lack of guidance on which skills they need to improve
+- No clear explanation of why a specific internship fits them
+- No simple way to track applications and progress
 
-At the same time, companies face challenges such as:
+Companies also face challenges such as:
 
 - Receiving many irrelevant applications
-- Difficulty identifying the best candidates
-- Time-consuming recruitment processes
+- Difficulty identifying the best candidates quickly
+- Lack of intelligent filtering and ranking tools
 
-This project aims to create a smart solution that connects students and companies more efficiently.
+Schools and coordinators may also struggle to:
+
+- Track student placement
+- Understand market demand
+- Follow internship activity across students and companies
+
+StageLink is designed to address all of these problems in one platform.
 
 ---
 
-## Objectives
+## Main Objectives
 
 The main objectives of this project are:
 
-- Build a modern and responsive web platform for internship management
-- Allow students to create profiles and apply for internships
-- Allow companies to post and manage internship offers
-- Implement role-based access for students, companies, and admins
-- Integrate a small AI module for recommendations and match scoring
-- Provide dashboards and statistics for better decision-making
+- Build a modern and responsive internship web platform
+- Allow students to search and apply for internships
+- Allow companies to publish offers and manage applicants
+- Provide admins/schools with monitoring and analytics tools
+- Implement role-based authentication and dashboards
+- Add a small intelligent recommendation system
+- Improve student employability through skill-gap guidance
+- Create a scalable project that can evolve in future versions
+
+---
+
+## What Makes StageLink Different
+
+StageLink is not just another internship listing website.
+
+### 1. School-Connected Platform
+StageLink includes an academic/admin perspective.  
+In addition to students and companies, it can also help schools or coordinators:
+
+- track student placements
+- monitor active companies
+- view internship statistics
+- analyze the most demanded skills in the market
+
+### 2. Explainable AI Matching
+Instead of only showing a score, StageLink explains **why** an internship matches a student.
+
+Example:
+- Match Score: **82%**
+- 3 out of 4 required skills matched
+- City preference matched
+- Profile level matched
+- Missing skill: **Docker**
+
+This makes the system more transparent and more useful.
+
+### 3. Employability Growth Approach
+StageLink is not only made to help students apply.  
+It is also designed to help them **become internship-ready** by offering:
+
+- profile completion indicators
+- skill-gap detection
+- personalized recommendations
+- career-readiness support
 
 ---
 
@@ -86,10 +130,11 @@ A student can:
 - Add skills and academic information
 - Upload a CV
 - Search and filter internship offers
-- Apply for internships
 - Save offers for later
-- View recommended internships
+- Apply for internships
 - Track application status
+- Receive recommended internships
+- View missing skills for selected offers
 
 ### 2. Company
 A company can:
@@ -99,88 +144,103 @@ A company can:
 - Publish internship offers
 - Edit or delete offers
 - View applicants for each offer
-- Filter and rank candidates
-- Manage application status
+- Review candidate match scores
+- Rank or filter candidates
+- Update application status
 
-### 3. Admin
-An admin can:
+### 3. Admin / School Coordinator
+An admin or coordinator can:
 
-- Manage all users
-- Validate or remove internship offers
-- Monitor platform activity
-- Access statistics and analytics
-- Supervise reports and moderation
+- Manage users and internship offers
+- Monitor student placement
+- View statistics and analytics
+- Track active companies
+- Analyze trends in required skills and internship demand
 
 ---
 
-## Main Features
+## Core Features
 
 ### Authentication & Authorization
 - User registration and login
 - Secure authentication
 - Role-based access control
-- Profile editing
+- Profile management
 
 ### Student Features
-- Personal profile management
+- Personal profile creation
 - Skills management
 - CV upload
 - Internship browsing
-- Filters by city, domain, type, and skills
-- Application history
+- Search and filters
 - Saved offers
-- Dashboard with recommendations and statistics
+- Application tracking
+- Personalized dashboard
 
 ### Company Features
 - Company profile management
 - Add, edit, and delete internship offers
-- View applicants for each offer
-- Change application status:
+- View applicants
+- Update application status:
   - Pending
   - Reviewed
   - Accepted
   - Rejected
-- Dashboard with statistics
+- Recruiter dashboard
 
-### Admin Features
+### Admin / School Features
 - User management
-- Internship offer moderation
+- Offer moderation
 - Platform monitoring
-- Global statistics dashboard
+- Internship placement statistics
+- Market demand overview
 
 ---
 
-## AI Features
+## AI & Smart Features
 
-One of the strongest parts of this project is the integration of a **small AI module**.
+One of the key strengths of StageLink is the integration of a **small intelligent module**.
 
 ### 1. Internship Recommendation System
-The system compares student skills with internship requirements and calculates a **match score**.
+The platform recommends internships based on:
+
+- student skills
+- preferred city
+- internship domain
+- profile level
+
+### 2. Explainable Match Score
+The system compares student data with internship requirements and returns a percentage score.
 
 Example:
-- Student skills: PHP, MySQL, Laravel, React
-- Offer requirements: PHP, Laravel, MySQL
-- Result: 85% match
+- Student skills: `PHP, MySQL, Laravel, React`
+- Offer requirements: `PHP, Laravel, MySQL`
+- Result: **85% match**
 
-### 2. CV / Skill Analysis
-The platform can analyze a student profile or CV to:
+But instead of stopping there, StageLink also explains the score:
+- matched skills
+- missing skills
+- matched preferences
+- profile compatibility
 
-- Extract important skills
-- Detect missing skills
-- Suggest better matching opportunities
+### 3. Skill Gap Detection
+The platform can show which important skills are missing for a selected offer.
 
-### 3. Candidate Ranking
-For companies, the system can help rank candidates based on:
+Example:
+- Required: `Laravel, MySQL, Docker`
+- Student has: `Laravel, MySQL`
+- Missing skill: `Docker`
 
-- Skill compatibility
-- Preferred location
-- Study level
-- Internship domain
+### 4. Employability Support
+This feature helps the student improve over time by:
+- identifying weak points
+- suggesting missing skills
+- improving readiness for internships
 
-### Example of Matching Formula
+### Example Matching Formula
 ```text
 Match Score =
 ( matched_skills / required_skills ) * 70
 + city_match * 10
 + domain_match * 10
-+ level_match * 10
++ profile_level_match * 10
