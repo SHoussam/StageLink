@@ -1,36 +1,43 @@
 # StageLink
 
-**StageLink** is a secure web platform for **internship tracking, application management, and document supervision**.  
-It is developed as an **end-of-year project (PFA)** by **Group 5** at **EMSI Tanger** for the academic year **2025/2026**.
+**StageLink** is a secure **multi-school internship tracking, application, and document management platform**.  
+It is developed as an **end-of-year project (PFA)** by **Group of  5 students ** at **EMSI Tanger** for the academic year **2025/2026**.
 
-The platform connects **students, companies, and school administrators** in one system.
+The platform connects **students, companies, schools, and platform administrators** in one secure system.
 
-Its main purpose is to make internship management more secure, more organized, and easier to supervise inside the school.
+Its purpose is to help schools supervise internship activity, verify students, manage documents securely, and allow companies to publish internship opportunities in a controlled environment.
 
 ---
 
-## Project Idea
+## Project Overview
 
-In many schools, internship applications are often managed in a scattered way.  
-Students search for opportunities by themselves, companies receive many files without structure, and schools have limited visibility on student internship activity.
+Internship management is often fragmented:
 
-**StageLink** solves this problem by providing a centralized platform where:
+- students search and apply in unstructured ways
+- companies receive many files without verification
+- schools have limited visibility on student internship progress
+- documents are often shared without proper control
+- there is no clear tracking of user actions
 
-- students can register, upload their documents, and apply for internships
-- companies can publish offers and review applicants
-- schools can track student internship activity, validate student accounts, supervise documents, and monitor the overall process
+**StageLink** solves this problem by offering a centralized platform where:
 
-The project is designed around the themes assigned to **Group 5**:
+- **schools** can join the platform after approval
+- **students** register under their own school and get verified by that school
+- **companies** create accounts and get verified before publishing offers
+- **school admins** track student internship activity, documents, and progress
+- **super admins** supervise schools, companies, and global system activity
 
-- **secure authentication**
-- **secure document management**
-- **user action logging**
+The project is strongly aligned with the **Group 5** themes:
+
+- secure authentication
+- secure document management
+- user action logging
 
 ---
 
 ## Main Objective
 
-The goal of StageLink is to build a secure and organized platform that allows schools to monitor internship activity while helping students and companies manage the internship process more efficiently.
+The objective of StageLink is to build a secure and scalable platform that allows multiple schools to supervise internship activities of their students while ensuring controlled access, document protection, and full action traceability.
 
 ---
 
@@ -40,65 +47,105 @@ The goal of StageLink is to build a secure and organized platform that allows sc
 A student can:
 
 - create an account
-- submit registration information
-- upload a student card for validation
+- choose their school during registration
+- upload a student card for verification
+- wait for approval from their school
 - complete a personal profile
 - upload internship-related documents
 - browse internship offers
 - apply for internships
-- track application status
+- track application progress
 
 ### Company
 A company can:
 
 - create an account
+- submit company information for verification
+- wait for approval before accessing full features
 - publish internship offers
 - review student applications
-- access authorized candidate documents
+- access authorized documents
 - update application status
 
 ### School Admin
 A school administrator can:
 
-- validate student accounts
+- manage their school space
+- review and approve student accounts
 - verify uploaded student cards
 - monitor student internship activity
-- supervise documents
-- track applications and internship progress
-- manage platform users
-- consult logs and statistics
+- supervise student documents
+- track internship progress
+- consult school dashboard and statistics
+
+### Super Admin
+A super admin can:
+
+- approve or reject schools
+- approve or reject companies
+- monitor all platform activity
+- manage global users and roles
+- supervise security and logs
+- access global dashboard statistics
 
 ---
 
-## Student Validation Process
+## Core Workflows
 
-One of the important ideas in this project is **student identity validation**.
+### 1. School Approval Workflow
+The platform is not limited to one school.
 
+A school can request access to the platform:
+
+1. the school submits its registration request
+2. the request is reviewed by the **super admin**
+3. the school is approved or rejected
+4. once approved, the school can manage its own students through its admins
+
+This ensures that only verified institutions can join the platform.
+
+---
+
+### 2. Student Verification by School
 When a student signs up:
 
 1. the student creates an account
-2. the student uploads a scanned image or file of their **student card**
-3. the account is marked as **pending**
-4. a **school administrator** reviews the information
-5. the admin approves or rejects the account
-6. only approved students can fully use the platform and apply for internships
+2. the student selects their school
+3. the student uploads a scanned student card
+4. the account is marked as **pending**
+5. the **school admin of that school** reviews the request
+6. the account is approved or rejected
+7. only approved students can fully use the platform
 
-This makes the system more secure and ensures that only real students from the school can access the platform.
+This process ensures that each student is validated by their own institution.
+
+---
+
+### 3. Company Verification
+To reduce fake or untrusted company accounts:
+
+1. the company creates an account
+2. the company submits its information
+3. the account remains **pending**
+4. the **super admin** verifies the company
+5. only approved companies can publish internship offers
+
+This improves platform trust and quality.
 
 ---
 
 ## Main Features
 
 - Secure registration and login
-- Role-based access control
-- Student account validation by school admin
-- Student card upload during registration
-- Secure document upload and storage
-- Controlled access to files based on user role
+- Multi-level role management
+- School approval workflow
+- Student verification by school
+- Company verification
+- Secure document upload and access control
 - Internship offer management
-- Internship application management
-- Activity tracking with logs
-- Admin dashboard for supervision and monitoring
+- Internship application tracking
+- Dashboard for supervision and monitoring
+- User action logging and audit trail
 
 ---
 
@@ -110,69 +157,112 @@ This makes the system more secure and ensures that only real students from the s
 - password protection
 - role-based access control
 - protected routes
-- account status management (`pending`, `approved`, `rejected`)
+- account status management
 
-### 2. Student Validation
+### 2. Multi-Level Roles
+The system includes multiple roles:
+
+- **Super Admin**
+- **School Admin**
+- **Company**
+- **Student**
+
+Each role has different permissions and access levels.
+
+---
+
+### 3. School Management
+- school registration request
+- school approval or rejection
+- school-specific administration
+- school-specific student tracking
+
+### 4. Student Management
+- registration under a selected school
 - upload student card
-- save verification request
-- admin review of student information
-- approve or reject student account
-- store validation history
+- verification request handling
+- school-based validation
+- student profile management
 
-### 3. Secure Document Management
+### 5. Company Management
+- company registration
+- company verification workflow
+- offer publication
+- applicant management
+
+### 6. Secure Document Management
 - upload CVs and internship documents
-- store files securely
-- control access based on roles
-- allow only authorized users to view or download files
-- restrict unauthorized access
+- store file references securely
+- controlled file access by role
+- authorized document viewing and download
+- restricted access for unauthorized users
 
-### 4. Internship Offer Management
-- companies create internship offers
-- companies edit or delete offers
-- students browse offers
-- students apply to offers
-- companies manage applicant status
+### 7. Internship Management
+- create internship offers
+- browse internship offers
+- apply to internship offers
+- manage application status
+- track internship progress
 
-### 5. School Supervision
-- track student internship activity
-- view applications by student
-- verify required documents
-- monitor progress of internships
-- access platform statistics
+### 8. Dashboard and Monitoring
+The platform includes dashboards for supervision.
 
-### 6. Logging System
-The platform records important user actions such as:
+Examples of dashboard information:
 
-- registration
-- login
+- total schools
+- total verified schools
+- total students
+- verified students
+- pending student verifications
+- total companies
+- verified companies
+- total offers
+- total applications
+- internship status statistics
+
+### 9. Logging System
+The platform records important actions such as:
+
+- school registration
+- school approval
+- company registration
+- company approval
+- student registration
 - student card upload
-- student account approval or rejection
+- student approval or rejection
+- login attempts
+- profile updates
 - document upload
 - document access
 - internship application submission
 - application status updates
-- profile modifications
 - admin moderation actions
 
-This module improves traceability, supervision, and security.
+This module improves security, accountability, and traceability.
 
 ---
 
-## Why This Project Is Interesting
+## Why This Project Is Strong
 
-StageLink is more than a simple internship website.
+StageLink is more than a basic internship site.
 
-It adds a strong academic and administrative value because the school is directly involved in the process.
+It becomes a **secure multi-school supervision platform** with:
 
-The platform allows the school to:
+- institution onboarding
+- student identity verification
+- company verification
+- secure document control
+- multi-role access management
+- administrative dashboards
+- logs and audit history
 
-- verify student identity
-- track internship applications
-- supervise internship documents
-- monitor progress and activity
-- maintain a clear history of actions through logs
+This makes the project:
 
-This makes the project more realistic, more secure, and more professional.
+- more realistic
+- more scalable
+- more professional
+- more original
+- strongly aligned with backend and database design
 
 ---
 
@@ -198,22 +288,21 @@ This makes the project more realistic, more secure, and more professional.
 
 ---
 
-## System Roles
-
-The platform is based on **three main roles**:
-
-- **Student**
-- **Company**
-- **School Admin**
-
-Each role has specific permissions and access levels.
-
----
-
 ## Suggested Database Entities
+
+### `schools`
+- id
+- name
+- email
+- city
+- address
+- status
+- verified_at
+- created_at
 
 ### `users`
 - id
+- school_id *(nullable for non-school users if needed)*
 - name
 - email
 - password
@@ -224,6 +313,7 @@ Each role has specific permissions and access levels.
 ### `students`
 - id
 - user_id
+- school_id
 - student_number
 - department
 - academic_year
@@ -240,6 +330,8 @@ Each role has specific permissions and access levels.
 - description
 - website
 - city
+- verification_status
+- verified_at
 
 ### `offers`
 - id
@@ -278,14 +370,16 @@ Each role has specific permissions and access levels.
 
 ## Example Use Cases
 
-- A student registers and uploads a student card
-- The school admin validates the student account
-- A student uploads a CV
-- A company publishes a new internship offer
-- A student applies to the offer
-- A company reviews the application
-- The school checks the student’s internship activity
-- The system records all major actions in logs
+- A school requests access to the platform
+- The super admin approves the school
+- A student registers and selects their school
+- The student uploads a student card
+- The school admin validates the student
+- A company registers and gets approved
+- The company publishes an internship offer
+- A verified student applies for the internship
+- The school tracks the student’s internship progress
+- The system records all important actions in logs
 
 ---
 
