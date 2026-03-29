@@ -1,246 +1,301 @@
 # StageLink
-### Smart Internship, Employability & Recruitment Platform
 
-StageLink is a web-based platform designed to connect **students**, **companies**, and **academic institutions** in one intelligent ecosystem.  
-It helps students find internships, helps companies identify suitable candidates, and helps schools monitor internship placement and market trends.
+**StageLink** is a secure web platform for **internship tracking, application management, and document supervision**.  
+It is developed as an **end-of-year project (PFA)** by **Group 5** at **EMSI Tanger** for the academic year **2025/2026**.
 
-Unlike a simple internship board, StageLink is designed as an **employability platform**: it not only allows students to apply for offers, but also helps them understand their strengths, detect missing skills, and improve their readiness for the job market.
+The platform connects **students, companies, and school administrators** in one system.
 
----
-
-## Table of Contents
-
-- [Project Overview](#project-overview)
-- [Problem Statement](#problem-statement)
-- [Main Objectives](#main-objectives)
-- [What Makes StageLink Different](#what-makes-stagelink-different)
-- [Main Users](#main-users)
-- [Core Features](#core-features)
-- [AI & Smart Features](#ai--smart-features)
-- [Tech Stack](#tech-stack)
-- [System Architecture](#system-architecture)
-- [Database Design](#database-design)
-- [Platform Workflow](#platform-workflow)
-- [Installation](#installation)
-- [Project Structure](#project-structure)
-- [Team Work Distribution](#team-work-distribution)
-- [Future Improvements](#future-improvements)
-- [Conclusion](#conclusion)
+Its main purpose is to make internship management more secure, more organized, and easier to supervise inside the school.
 
 ---
 
-## Project Overview
+## Project Idea
 
-Finding internships is often difficult for students because opportunities are scattered across different websites, and many students do not know whether their profile really matches the market.  
-At the same time, companies often receive many applications and need a better way to identify the most relevant candidates.
+In many schools, internship applications are often managed in a scattered way.  
+Students search for opportunities by themselves, companies receive many files without structure, and schools have limited visibility on student internship activity.
 
-StageLink solves this problem by providing a centralized platform where:
+**StageLink** solves this problem by providing a centralized platform where:
 
-- **Students** can create profiles, add skills, upload CVs, receive recommendations, and apply for internships
-- **Companies** can publish offers, manage candidates, and review ranked applicants
-- **Schools/Admins** can monitor internship placement, student progress, and market demand
+- students can register, upload their documents, and apply for internships
+- companies can publish offers and review applicants
+- schools can track student internship activity, validate student accounts, supervise documents, and monitor the overall process
 
-The platform also includes a **small intelligent recommendation module** that calculates match scores, explains why an offer matches a student, and highlights missing skills.
+The project is designed around the themes assigned to **Group 5**:
 
----
-
-## Problem Statement
-
-Students face several challenges when searching for internships:
-
-- Difficulty finding opportunities adapted to their profile
-- Lack of guidance on which skills they need to improve
-- No clear explanation of why a specific internship fits them
-- No simple way to track applications and progress
-
-Companies also face challenges such as:
-
-- Receiving many irrelevant applications
-- Difficulty identifying the best candidates quickly
-- Lack of intelligent filtering and ranking tools
-
-Schools and coordinators may also struggle to:
-
-- Track student placement
-- Understand market demand
-- Follow internship activity across students and companies
-
-StageLink is designed to address all of these problems in one platform.
+- **secure authentication**
+- **secure document management**
+- **user action logging**
 
 ---
 
-## Main Objectives
+## Main Objective
 
-The main objectives of this project are:
-
-- Build a modern and responsive internship web platform
-- Allow students to search and apply for internships
-- Allow companies to publish offers and manage applicants
-- Provide admins/schools with monitoring and analytics tools
-- Implement role-based authentication and dashboards
-- Add a small intelligent recommendation system
-- Improve student employability through skill-gap guidance
-- Create a scalable project that can evolve in future versions
-
----
-
-## What Makes StageLink Different
-
-StageLink is not just another internship listing website.
-
-### 1. School-Connected Platform
-StageLink includes an academic/admin perspective.  
-In addition to students and companies, it can also help schools or coordinators:
-
-- track student placements
-- monitor active companies
-- view internship statistics
-- analyze the most demanded skills in the market
-
-### 2. Explainable AI Matching
-Instead of only showing a score, StageLink explains **why** an internship matches a student.
-
-Example:
-- Match Score: **82%**
-- 3 out of 4 required skills matched
-- City preference matched
-- Profile level matched
-- Missing skill: **Docker**
-
-This makes the system more transparent and more useful.
-
-### 3. Employability Growth Approach
-StageLink is not only made to help students apply.  
-It is also designed to help them **become internship-ready** by offering:
-
-- profile completion indicators
-- skill-gap detection
-- personalized recommendations
-- career-readiness support
+The goal of StageLink is to build a secure and organized platform that allows schools to monitor internship activity while helping students and companies manage the internship process more efficiently.
 
 ---
 
 ## Main Users
 
-### 1. Student
+### Student
 A student can:
 
-- Create an account and log in
-- Complete a personal profile
-- Add skills and academic information
-- Upload a CV
-- Search and filter internship offers
-- Save offers for later
-- Apply for internships
-- Track application status
-- Receive recommended internships
-- View missing skills for selected offers
+- create an account
+- submit registration information
+- upload a student card for validation
+- complete a personal profile
+- upload internship-related documents
+- browse internship offers
+- apply for internships
+- track application status
 
-### 2. Company
+### Company
 A company can:
 
-- Create a recruiter/company account
-- Complete a company profile
-- Publish internship offers
-- Edit or delete offers
-- View applicants for each offer
-- Review candidate match scores
-- Rank or filter candidates
-- Update application status
+- create an account
+- publish internship offers
+- review student applications
+- access authorized candidate documents
+- update application status
 
-### 3. Admin / School Coordinator
-An admin or coordinator can:
+### School Admin
+A school administrator can:
 
-- Manage users and internship offers
-- Monitor student placement
-- View statistics and analytics
-- Track active companies
-- Analyze trends in required skills and internship demand
+- validate student accounts
+- verify uploaded student cards
+- monitor student internship activity
+- supervise documents
+- track applications and internship progress
+- manage platform users
+- consult logs and statistics
 
 ---
 
-## Core Features
+## Student Validation Process
 
-### Authentication & Authorization
-- User registration and login
-- Secure authentication
+One of the important ideas in this project is **student identity validation**.
+
+When a student signs up:
+
+1. the student creates an account
+2. the student uploads a scanned image or file of their **student card**
+3. the account is marked as **pending**
+4. a **school administrator** reviews the information
+5. the admin approves or rejects the account
+6. only approved students can fully use the platform and apply for internships
+
+This makes the system more secure and ensures that only real students from the school can access the platform.
+
+---
+
+## Main Features
+
+- Secure registration and login
 - Role-based access control
-- Profile management
-
-### Student Features
-- Personal profile creation
-- Skills management
-- CV upload
-- Internship browsing
-- Search and filters
-- Saved offers
-- Application tracking
-- Personalized dashboard
-
-### Company Features
-- Company profile management
-- Add, edit, and delete internship offers
-- View applicants
-- Update application status:
-  - Pending
-  - Reviewed
-  - Accepted
-  - Rejected
-- Recruiter dashboard
-
-### Admin / School Features
-- User management
-- Offer moderation
-- Platform monitoring
-- Internship placement statistics
-- Market demand overview
+- Student account validation by school admin
+- Student card upload during registration
+- Secure document upload and storage
+- Controlled access to files based on user role
+- Internship offer management
+- Internship application management
+- Activity tracking with logs
+- Admin dashboard for supervision and monitoring
 
 ---
 
-## AI & Smart Features
+## Functional Modules
 
-One of the key strengths of StageLink is the integration of a **small intelligent module**.
+### 1. Authentication and Authorization
+- registration
+- login
+- password protection
+- role-based access control
+- protected routes
+- account status management (`pending`, `approved`, `rejected`)
 
-### 1. Internship Recommendation System
-The platform recommends internships based on:
+### 2. Student Validation
+- upload student card
+- save verification request
+- admin review of student information
+- approve or reject student account
+- store validation history
 
-- student skills
-- preferred city
-- internship domain
-- profile level
+### 3. Secure Document Management
+- upload CVs and internship documents
+- store files securely
+- control access based on roles
+- allow only authorized users to view or download files
+- restrict unauthorized access
 
-### 2. Explainable Match Score
-The system compares student data with internship requirements and returns a percentage score.
+### 4. Internship Offer Management
+- companies create internship offers
+- companies edit or delete offers
+- students browse offers
+- students apply to offers
+- companies manage applicant status
 
-Example:
-- Student skills: `PHP, MySQL, Laravel, React`
-- Offer requirements: `PHP, Laravel, MySQL`
-- Result: **85% match**
+### 5. School Supervision
+- track student internship activity
+- view applications by student
+- verify required documents
+- monitor progress of internships
+- access platform statistics
 
-But instead of stopping there, StageLink also explains the score:
-- matched skills
-- missing skills
-- matched preferences
-- profile compatibility
+### 6. Logging System
+The platform records important user actions such as:
 
-### 3. Skill Gap Detection
-The platform can show which important skills are missing for a selected offer.
+- registration
+- login
+- student card upload
+- student account approval or rejection
+- document upload
+- document access
+- internship application submission
+- application status updates
+- profile modifications
+- admin moderation actions
 
-Example:
-- Required: `Laravel, MySQL, Docker`
-- Student has: `Laravel, MySQL`
-- Missing skill: `Docker`
+This module improves traceability, supervision, and security.
 
-### 4. Employability Support
-This feature helps the student improve over time by:
-- identifying weak points
-- suggesting missing skills
-- improving readiness for internships
+---
 
-### Example Matching Formula
-```text
-Match Score =
-( matched_skills / required_skills ) * 70
-+ city_match * 10
-+ domain_match * 10
-+ profile_level_match * 10
+## Why This Project Is Interesting
+
+StageLink is more than a simple internship website.
+
+It adds a strong academic and administrative value because the school is directly involved in the process.
+
+The platform allows the school to:
+
+- verify student identity
+- track internship applications
+- supervise internship documents
+- monitor progress and activity
+- maintain a clear history of actions through logs
+
+This makes the project more realistic, more secure, and more professional.
+
+---
+
+## Technologies Used
+
+### Frontend
+- React
+- Tailwind CSS
+- React Router
+- Axios
+
+### Backend
+- Laravel
+
+### Database
+- MySQL
+
+### Tools
+- Git & GitHub
+- VS Code
+- Postman
+- Figma (optional)
+
+---
+
+## System Roles
+
+The platform is based on **three main roles**:
+
+- **Student**
+- **Company**
+- **School Admin**
+
+Each role has specific permissions and access levels.
+
+---
+
+## Suggested Database Entities
+
+### `users`
+- id
+- name
+- email
+- password
+- role
+- status
+- created_at
+
+### `students`
+- id
+- user_id
+- student_number
+- department
+- academic_year
+- student_card_path
+- validation_status
+- validated_by
+- validated_at
+
+### `companies`
+- id
+- user_id
+- company_name
+- sector
+- description
+- website
+- city
+
+### `offers`
+- id
+- company_id
+- title
+- description
+- location
+- duration
+- deadline
+- status
+
+### `applications`
+- id
+- student_id
+- offer_id
+- status
+- applied_at
+
+### `documents`
+- id
+- student_id
+- type
+- file_path
+- uploaded_at
+
+### `logs`
+- id
+- user_id
+- action
+- target_type
+- target_id
+- description
+- created_at
+
+---
+
+## Example Use Cases
+
+- A student registers and uploads a student card
+- The school admin validates the student account
+- A student uploads a CV
+- A company publishes a new internship offer
+- A student applies to the offer
+- A company reviews the application
+- The school checks the student’s internship activity
+- The system records all major actions in logs
+
+---
+
+## Project Structure
+
+```bash
+StageLink/
+│
+├── frontend/        # React application
+├── backend/         # Laravel API
+├── database/        # Migrations and seeders
+├── docs/            # UML diagrams, reports, notes
+└── README.md
